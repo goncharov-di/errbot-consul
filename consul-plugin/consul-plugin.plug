@@ -1,0 +1,11 @@
+[Core]
+module = consul-plugin
+name = ConsulPlugin
+
+[Documentation]
+description = Consul integration for errbot
+
+[Python]
+version = 3
+
+[Errbot]
