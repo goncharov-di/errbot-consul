@@ -12,7 +12,7 @@ class ConsulPlugin(BotPlugin):
         key = 'versions/'+branch+'/'+key
         index, data = c.kv.get(key)
         v = data['Value']
-        yield ('{} value is: {}'.format(key, v.decode("utf-8")))
+        yield ('{}:{}'.format(key, v.decode("utf-8")))
 
     @botcmd
     @arg_botcmd('destination', type=str)
@@ -36,7 +36,7 @@ class ConsulPlugin(BotPlugin):
         key = 'versions/' + branch + '/'
         index, data = c.kv.get(key, recurse=True)
         for a in data:
-            yield ('{}/{}'.format(a['Key'], a['Value'].decode("utf-8")))
+            yield ('{}:{}'.format(a['Key'], a['Value'].decode("utf-8")))
 
     @botcmd
     @arg_botcmd('value', type=str)
