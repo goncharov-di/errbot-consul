@@ -6,8 +6,8 @@ class ConsulPlugin(BotPlugin):
     @botcmd
     @arg_botcmd('key', type=str)
     @arg_botcmd('branch', type=str)
-    def consul_get_version(self, msg, branch=None, key=None):
-        """Get version for particular branch and key from Consul."""
+    def consul_get_value(self, msg, branch=None, key=None):
+        """Get value for particular branch and key from Consul."""
         c = consul.Consul(host=CONSUL_HOST)
         key = 'versions/'+branch+'/'+key
         index, data = c.kv.get(key)
