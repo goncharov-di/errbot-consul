@@ -3,9 +3,10 @@ Simple plugin for integration between Errbot and Consul KV Storage.
 
 ## Usage:
 Let's say you have Consul KV Storage with the folowing structure:
-*master/key1*
-*master/key2*
-*develop/key1*
+- *master/key1*
+- *master/key2*
+- *develop/key1*
+
 and so on.
 
 ### !consul_list_branch
