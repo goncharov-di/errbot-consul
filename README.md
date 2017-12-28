@@ -2,7 +2,7 @@
 Simple plugin for integration between Errbot and Consul KV Storage.
 
 ## Usage:
-Let's say you have Consul KV Storage with the folowing structure:
+Let's say you have Consul KV Storage with the following structure:
 - *master/key1*
 - *master/key2*
 - *develop/key1*
@@ -35,4 +35,4 @@ This command will update value of key1 in "master" branch to "foo" value.
 
 ## Install:
 1. Copy *consul-plugin* directory to Errbot's *plugins* directory.
-2. Add address of your Consul KV in Errbot's *config.py* file as CONSUL_HOST variable.
+2. Add the address of your Consul KV in Errbot's *config.py* file as CONSUL_HOST variable.
